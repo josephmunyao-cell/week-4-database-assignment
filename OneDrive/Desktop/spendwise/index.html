@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SpendWise</title>
+    <!-- Part 4: Link to external CSS stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Part 1: Page Header -->
+    <header>
+        <h1 id="main-title">SpendWise</h1>
+        <p class="subheading">Welcome to my expense tracking application. Track your daily expenses effortlessly.</p>
+    </header>
+
+    <main>
+        <!-- Part 2: Add Expense Section -->
+        <section id="add-expense-section">
+            <h2>Add Expense</h2>
+
+            <div class="input-group">
+                <label for="expense-name">Expense Name:</label>
+                <input type="text" id="expense-name" placeholder="e.g., Lunch, Bus Fare">
+            </div>
+
+            <div class="input-group">
+                <label for="expense-amount">Amount:</label>
+                <input type="number" id="expense-amount" placeholder="e.g., 250">
+            </div>
+
+            <div class="input-group">
+                <label for="expense-category">Category:</label>
+                <input type="text" id="expense-category" placeholder="e.g., Food, Transport">
+            </div>
+
+            <button type="button" class="btn">Add Expense</button>
+        </section>
+
+        <!-- Part 3: Your Expenses Placeholder Section -->
+        <section id="expense-list-section">
+            <h2>Your Expenses</h2>
+            <p class="placeholder-text">No expenses yet</p>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

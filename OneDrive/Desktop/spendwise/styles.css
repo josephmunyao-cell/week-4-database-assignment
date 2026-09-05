@@ -1,0 +1,72 @@
+/* --- Element Selectors --- */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f8;
+    margin: 0;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+/* --- ID Selectors --- */
+#main-title {
+    color: #1a365d;
+    margin-bottom: 5px;
+}
+
+#add-expense-section {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+#expense-list-section {
+    background-color: #edf2f7;
+    border: 1px solid #cbd5e0;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+/* --- Class Selectors --- */
+.subheading {
+    color: #4a5568;
+    font-size: 1rem;
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+.btn {
+    background-color: #2b6cb0;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.placeholder-text {
+    font-style: italic;
+    color: #718096;
+}
