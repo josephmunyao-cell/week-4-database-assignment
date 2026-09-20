@@ -1,0 +1,237 @@
+/* ==========================================================================
+   1. COLOR PALETTE & GLOBAL VARIABLES
+   ========================================================================== */
+:root {
+    --primary-color: #1e293b;       /* Deep Slate Blue - Headers & Structure */
+    --accent-color: #0d9488;        /* Teal Accent - Highlights & Focus */
+    --success-color: #059669;       /* Emerald Green - Primary Buttons */
+    --success-hover: #047857;       /* Dark Emerald - Button Hover */
+    --bg-page: #f8fafc;             /* Light Slate Tint - Body Background */
+    --bg-card: #ffffff;             /* Pure White - Section Cards */
+    --bg-alt-row: #f1f5f9;          /* Soft Gray - Alternating Rows */
+    --text-primary: #0f172a;        /* High Contrast Charcoal - Headings & Body */
+    --text-muted: #64748b;          /* Medium Gray - Labels & Secondary Text */
+    --border-color: #e2e8f0;        /* Subtle Border Gray */
+    --shadow-soft: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
+}
+
+/* ==========================================================================
+   2. BASE TYPOGRAPHY & RESET
+   ========================================================================== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background-color: var(--bg-page);
+    color: var(--text-primary);
+    line-height: 1.6;
+    padding-bottom: 40px;
+}
+
+h1, h2, h3 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+h1 {
+    font-size: 1.75rem;
+}
+
+h2 {
+    font-size: 1.35rem;
+}
+
+/* ==========================================================================
+   3. BOX MODEL & LAYOUT CARDS
+   ========================================================================== */
+.container {
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Reusable Section Card Styling */
+.card {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 24px;
+    margin-bottom: 24px;
+    box-shadow: var(--shadow-soft);
+}
+
+.main-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    margin-top: 24px;
+    background-color: var(--primary-color);
+    color: #ffffff;
+    border: none;
+}
+
+.main-header h1 {
+    color: #ffffff;
+    margin-bottom: 0;
+}
+
+/* Collapsible Instructions Guide */
+.usage-guide {
+    background-color: #f0fdf4;
+    border-left: 5px solid var(--success-color);
+}
+
+.usage-guide summary {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    color: var(--success-hover);
+    cursor: pointer;
+}
+
+.usage-guide p {
+    margin-top: 10px;
+    color: var(--text-primary);
+    font-size: 0.95rem;
+}
+
+/* ==========================================================================
+   4. FORM STYLING
+   ========================================================================== */
+.form-group {
+    margin-bottom: 18px;
+}
+
+/* Direct Child Selector for Form Labels */
+.form-group > label {
+    display: block;
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: var(--text-primary);
+    margin-bottom: 6px;
+}
+
+input, select {
+    width: 100%;
+    padding: 10px 14px;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.95rem;
+    color: var(--text-primary);
+    background-color: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    transition: all 0.2s ease-in-out;
+}
+
+/* Focus States & Negation Pseudo-Class */
+input:not([type="button"]):focus, select:focus {
+    border-color: var(--accent-color);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(13, 148, 136, 0.15);
+}
+
+.btn-submit {
+    background-color: var(--success-color);
+    color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.btn-submit:hover {
+    background-color: var(--success-hover);
+}
+
+.btn-submit:active {
+    transform: scale(0.99);
+}
+
+/* ==========================================================================
+   5. TABLE STYLING
+   ========================================================================== */
+.table-container {
+    overflow-x: auto;
+}
+
+.expense-table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.expense-table thead {
+    background-color: var(--primary-color);
+    color: #ffffff;
+}
+
+/* Descendant Selector for Table Headers & Cells */
+.expenses-section th, 
+.expenses-section td {
+    padding: 12px 16px;
+    text-align: left;
+    border-bottom: 1px solid var(--border-color);
+    font-size: 0.95rem;
+}
+
+.expenses-section th {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Alternating Row Colors using Position-Based Pseudo-Class */
+.expense-table tbody tr:nth-child(even) {
+    background-color: var(--bg-alt-row);
+}
+
+/* Table Row Hover State */
+.expense-table tbody tr:hover {
+    background-color: #e2e8f0;
+}
+
+/* ==========================================================================
+   6. MULTIMEDIA & FOOTER
+   ========================================================================== */
+.video-section {
+    text-align: center;
+}
+
+.iframe-wrapper {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+    height: 0;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.iframe-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.main-footer {
+    text-align: center;
+    padding: 20px;
+    color: var(--text-muted);
+    font-size: 0.875rem;
+    margin-top: 20px;
+}
